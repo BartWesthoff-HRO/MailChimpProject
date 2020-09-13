@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MailChimp.Models.ContactPerson>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Lijst met contactpersonen</h2>
+        </div>
+       
+    </div>
+
+    <br /><br />
+
+    @if(Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Persoon voornaam
+                    </th>
+                    <th>
+                        Persoon achternaam
+                    </th>
+                    <th>
+                        label
+                    </th>
+                    <th>
+                        bedrijf
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var obj in Model)
+                {
+                <tr>
+                    <td style="word-break:break-word">@obj.FirstName</td>
+                    <td style="word-break:break-word">@obj.LastName</td>
+                    <td style="word-break:break-word">@obj.Label</td>
+                    <td style="word-break:break-word">@obj.Company</td>   
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p> de lijst bestaat niet.</p>
+    }
+</div>
+
