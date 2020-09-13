@@ -22,7 +22,7 @@ namespace MailChimp.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contact.";
+            ViewBag.Message = "Contact";
 
             return View();
         }
