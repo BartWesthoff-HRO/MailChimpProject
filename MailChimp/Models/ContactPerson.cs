@@ -12,7 +12,5 @@ namespace MailChimp.Models
         public string Company { get; set; }
         public string Label { get; set; }
         
-
-       
     }
 }
