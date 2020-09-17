@@ -14,12 +14,15 @@ namespace MailChimp.Controllers
     public class EmpController : Controller
     {
         private ApplicationDBContext db = new ApplicationDBContext();
+        
 
         // GET: Emp
         public ActionResult Index()
         {
+         
             return View(db.Empobj.ToList());
         }
+
 
         // GET: Emp/Details/5
         public ActionResult Details(int? id)
@@ -29,6 +32,7 @@ namespace MailChimp.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Employee employee = db.Empobj.Find(id);
+            
             if (employee == null)
             {
                 return HttpNotFound();
@@ -42,6 +46,7 @@ namespace MailChimp.Controllers
             return View();
         }
 
+
         // POST: Emp/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -51,6 +56,13 @@ namespace MailChimp.Controllers
         {
             if (ModelState.IsValid)
             {
+                foreach (var model in db.Empobj)
+                {
+                    if(model.password == employee.password || model.username == employee.username)
+                    {
+                        return View(employee);
+                    }
+                }
                 db.Empobj.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -67,6 +79,7 @@ namespace MailChimp.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Employee employee = db.Empobj.Find(id);
+
             if (employee == null)
             {
                 return HttpNotFound();
@@ -124,5 +137,6 @@ namespace MailChimp.Controllers
             }
             base.Dispose(disposing);
         }
+       
     }
 }

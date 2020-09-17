@@ -4,6 +4,7 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Web;
+using System.ComponentModel;
 
 namespace MailChimp.Models
 {
@@ -12,7 +13,12 @@ namespace MailChimp.Models
     {
         [Key]
         public int userid { get; set; }
+        [DisplayName("User Name")]
+        [Required(ErrorMessage ="Je moet een username invullen")]
         public string username { get; set; }
-        public string password { get; set; }       
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Je moet een wachtwoord invullen")]
+        public string password { get; set; }
+        public string loginerrormessage { get; set; }
     }
 }
