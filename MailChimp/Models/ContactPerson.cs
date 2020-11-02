@@ -11,6 +11,8 @@ namespace MailChimp.Models
         public string LastName { get; set; }
         public string Company { get; set; }
         public string Label { get; set; }
-        
+        public string email { get; set; }
+        public DateTime Birthdate { get; set; }
+
     }
 }

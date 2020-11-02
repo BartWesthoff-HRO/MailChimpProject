@@ -14,11 +14,10 @@ namespace MailChimp.Models
         [Key]
         public int userid { get; set; }
         [DisplayName("User Name")]
-        [Required(ErrorMessage ="Je moet een username invullen")]
+        [Required(ErrorMessage ="Je moet een naam invullen")]
         public string username { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Je moet een wachtwoord invullen")]
         public string password { get; set; }
-        public string loginerrormessage { get; set; }
     }
 }

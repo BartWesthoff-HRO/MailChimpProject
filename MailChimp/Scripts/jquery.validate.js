@@ -867,7 +867,7 @@ $.extend( $.validator, {
 				message = $.validator.format( message.replace( theregex, "{$1}" ), rule.parameters );
 			}
 
-			return message;
+			return "Dit is een custom error XYZZ";
 		},
 
 		formatAndAdd: function( element, rule ) {
@@ -939,14 +939,14 @@ $.extend( $.validator, {
 				error.removeClass( this.settings.validClass ).addClass( this.settings.errorClass );
 
 				// Replace message on existing label
-				error.html( message );
+				error.html( "Dit is een custom error XYZZ" );
 			} else {
 
 				// Create error element
 				error = $( "<" + this.settings.errorElement + ">" )
 					.attr( "id", elementID + "-error" )
 					.addClass( this.settings.errorClass )
-					.html( message || "" );
+					.html("Dit is een custom error XYZZ" || "" );
 
 				// Maintain reference to the element to be placed into the DOM
 				place = error;

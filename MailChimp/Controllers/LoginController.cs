@@ -23,7 +23,7 @@ namespace MailChimp.Controllers
                 Employee userDetails = db.Empobj.Where(x => x.username == employee.username && x.password == employee.password).FirstOrDefault();
                 if (userDetails == null)
                 {
-                    employee.loginerrormessage = "Wrong username or password.";
+                    
                     return View("Index", employee);
                 }
                 else
