@@ -30,7 +30,7 @@ namespace MailChimp.Controllers
                 {
                     Session["userid"] = userDetails.userid;
                     Session["username"] = userDetails.username;
-                    return RedirectToAction("Index", "Emp");
+                    return RedirectToAction("Index", "Home");
                 }
             }
      
