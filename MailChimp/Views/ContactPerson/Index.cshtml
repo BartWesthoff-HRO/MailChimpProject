@@ -19,7 +19,7 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
-            <a class="nav-item nav-link active" href="mailto:test@test.com"> tijmen style</a>
+            <a class="nav-item nav-link active" href="mailto:test@test.com"> restultaten</a>
             <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPerson", null, null)</a>
         </div>
     </nav>
@@ -49,13 +49,11 @@
             <tbody>
                 @foreach (var obj in Model)
                 {
-                    <tr>
-                        <td>@obj.FirstName </td>
-                        <td> @obj.LastName</td>
-                        <td> @obj.Label</td>
-                        <td> @obj.Company</td>
-                        <td> @obj.email</td>
-                    </tr>
+                <tr>
+                    <td>@obj.personid </td>
+                    <td>@obj.firstname </td>
+                    <td> @obj.lastname</td>
+                </tr>
                 }
             </tbody>
         </table>
@@ -65,39 +63,7 @@
     {
         <p> de lijst bestaat niet.</p>
     }
-
-
-
     <img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />
-
-    @*<script>
-        var elements = document.getElementsByTagName('tr');
-        for (var i = 0; i < elements.length; i++) {
-            (elements)[i].addEventListener("click", function () {
-                alert(this.innerText.toString().split("	")[4].toLocaleLowerCase());
-            });
-        }
-    </script>*@
-
-    @*<script>
-        var trs = document.querySelectorAll("tr");
-        for (var i = 0; i < trs.length; i++) {
-            trs[i].addEventListener("click", function () {
-                var cn = this.className, thc = " selected", start_idx = cn.indexOf(thc);
-                if (start_idx == -1) cn += thc;
-                else cn = cn.replace(thc, "");
-                this.className = cn;
-            });
-        }​
-    </script>*@
-    <script>
-        var trs = document.querySelectorAll("tr");
-        for (var i = 0; i < trs.length; i++) {
-            trs[i].addEventListener("click", function () {
-                this.className == " selected";
-            });
-        }
-    </script>
 </body>
 
 
