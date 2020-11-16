@@ -19,7 +19,7 @@
         <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="#"> mails</a>
+            <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>>
             <a class="nav-item nav-link active" href="mailto:test@test.com"> restultaten</a>
             <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPerson", null, null)</a>
         </div>
