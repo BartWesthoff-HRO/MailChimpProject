@@ -6,7 +6,7 @@
  */
 
 :root {
-    --blue: #007bff;
+    --blue: #fd7e14;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -19,7 +19,7 @@
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #007bff;
+    --primary: #fd7e14;
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;
@@ -1826,7 +1826,7 @@ pre {
 }
 
 .table-primary, .table-primary > td, .table-primary > th {
-    background-color: #b8daff
+    background-color: #fd7e14
 }
 
 .table-hover .table-primary:hover {
@@ -5913,7 +5913,7 @@ button.close {
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
-    background-color: #0062cc !important
+    background-color: #fd7e14 !important
 }
 
 .bg-secondary {
@@ -8957,4 +8957,86 @@ a.text-dark:focus, a.text-dark:hover {
         border: 1px solid #ddd !important
     }
 }
-/*# sourceMappingURL=bootstrap.min.css.map */
+
+.button {
+    background-color:orange;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 80px;
+    top: 350px;
+}
+
+    .button:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .button:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+
+.versturen {
+    background-color: orange;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 330px;
+    top: 80px;
+}
+
+    .versturen:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .versturen:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    position: absolute;
+    left: 500px;
+    top: 80px;
+    resize: none;
+}
+
+textarea {
+    width: 60%;
+    height: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    resize: none;
+}
