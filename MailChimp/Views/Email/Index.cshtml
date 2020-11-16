@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+}
+
+<h2>Email</h2>
+
+<style>
+
+
+    .button {
+        background-color: darkorange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 80px;
+        top: 350px;
+    }
+
+    .button:hover {
+         background-color: orange;
+         color: white;
+    }
+
+    .button:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+
+    .versturen {
+        background-color: darkorange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 330px;
+        top: 80px;
+    }
+
+    .versturen:hover {
+         background-color: orange;
+         color: white;
+    }
+
+    .versturen:active {
+         background-color: orange;
+         box-shadow: 0 5px orange;
+         transform: translateY(4px);
+    }
+
+    input[type=text] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f8f8f8;
+        position: absolute;
+        left: 500px;
+        top: 80px;
+        resize: none;
+    }
+
+    textarea {
+        width: 60%;
+        height: 500px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        position: absolute;
+        top: 200px;
+        left: 500px;
+        resize: none;
+    }
+
+
+</style>
+
+<body>
+
+    <a class="button"> Reeds verzonden emails</a>
+    <a class="versturen">Versturen</a>
+
+    <form>
+        <input type="text" placeholder="E-mailadres/tags/achternaam">
+        <textarea></textarea>
+    </form>
+</body>
+
