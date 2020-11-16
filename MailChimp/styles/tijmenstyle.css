@@ -9021,6 +9021,16 @@ a.text-dark:focus, a.text-dark:hover {
     }
 
 input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    left: 500px;
+    top: 80px;
+    resize: none;
+}
+
+/*input[type=text] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -9030,7 +9040,7 @@ input[type=text] {
     left: 500px;
     top: 80px;
     resize: none;
-}
+}*/
 
 textarea {
     width: 60%;

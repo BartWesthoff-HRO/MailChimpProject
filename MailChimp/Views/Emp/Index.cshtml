@@ -1,12 +1,23 @@
 ﻿
 @model IEnumerable<MailChimp.Models.Employee>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homescreen</title>
+    <link href="~/styles/tijmenstyle.css" rel="stylesheet" />
+</head>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
-
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" @Html.ActionLink("Home", "Index", "Home", null, null)</a
+        <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
+        <a class="nav-item nav-link active" @Html.ActionLink("resultaten", "Index", "resultaten", null, null)</a>
+        <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPersons", null, null)</a>
+    </div>
+</nav>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -21,20 +32,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.password)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.userid }) |
-            @Html.ActionLink("Details", "Details", new { id=item.userid }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.userid })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.userid }) |
+                @Html.ActionLink("Details", "Details", new { id = item.userid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.userid })
+            </td>
+        </tr>
+    }
 
 </table>

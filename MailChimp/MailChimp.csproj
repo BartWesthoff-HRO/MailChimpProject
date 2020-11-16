@@ -361,6 +361,7 @@
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResultatenController.cs" />
     <Compile Include="DataContext\ApplicationDBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -420,7 +421,7 @@
     <Content Include="Views\ContactPersons\Details.cshtml" />
     <Content Include="Views\ContactPersons\Edit.cshtml" />
     <Content Include="Views\ContactPersons\Index.cshtml" />
-    <Content Include="Views\ContactPersons\newcreate.cshtml" />
+    <Content Include="Views\resultaten\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
