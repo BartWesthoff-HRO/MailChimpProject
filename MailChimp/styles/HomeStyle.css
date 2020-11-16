@@ -28,13 +28,14 @@
     --light: #f8f9fa;
     --dark: #343a40;
     --black: #000000;
+    --creme: #FEF4EB;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 *, ::after, ::before {
@@ -1789,31 +1790,20 @@ pre {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
-    background-color: transparent
+    
 }
+
 
     .table td, .table th {
         padding: .75rem;
         vertical-align: top;
-        border-top: 1px solid #dee2e6
+        border-bottom: 1px solid grey;
     }
-
-    .table thead th {
-        vertical-align: bottom;
-        border-bottom: 2px solid #dee2e6
-    }
-
-    .table tbody + tbody {
-        border-top: 2px solid #dee2e6
-    }
-
-    .table .table {
-        background-color: #fff
-    }
-
-.table-sm td, .table-sm th {
-    padding: .3rem
+    /* test voor selecting rows*/
+.table tr:hover, tr.selected {
+    background-color: #FFCF8B
 }
+
 
 .table-bordered {
     border: 1px solid #dee2e6
@@ -1943,38 +1933,14 @@ pre {
         background-color: rgba(0,0,0,.075)
     }
 
-.table .thead-dark th {
-    color: #fff;
-    background-color: #212529;
-    border-color: #32383e
-}
 
 .table .thead-light th {
-    color: #495057;
-    background-color: #e9ecef;
-    border-color: #dee2e6
+    color: orange, orange;
+    background-color: orange, orange;
+    border-color: orange, orange;
 }
 
-.table-dark {
-    color: #fff;
-    background-color: #212529
-}
 
-    .table-dark td, .table-dark th, .table-dark thead th {
-        border-color: #32383e
-    }
-
-    .table-dark.table-bordered {
-        border: 0
-    }
-
-    .table-dark.table-striped tbody tr:nth-of-type(odd) {
-        background-color: rgba(255,255,255,.05)
-    }
-
-    .table-dark.table-hover tbody tr:hover {
-        background-color: rgba(255,255,255,.075)
-    }
 
 @media (max-width:575.98px) {
     .table-responsive-sm {
@@ -3779,103 +3745,14 @@ tbody.collapse.show {
         border-radius: 0 .25rem .25rem 0
     }
 
-.nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none
-}
 
-.nav-link {
-    display: block;
-    padding: .5rem 1rem;
-    color: #000000;
-}
+
 
     .nav-link:focus, .nav-link:hover {
-        color: white;
         text-decoration: none;
         background-color: orange;
     }
 
-    .nav-link.disabled {
-        color: #6c757d
-    }
-
-.nav-tabs {
-    border-bottom: 1px solid #dee2e6
-}
-
-    .nav-tabs .nav-item {
-        margin-bottom: -1px
-    }
-
-    .nav-tabs .nav-link {
-        border: 1px solid transparent;
-        border-top-left-radius: .25rem;
-        border-top-right-radius: .25rem
-    }
-
-        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-            border-color: #e9ecef #e9ecef #dee2e6;
-            
-            
-        }
-
-        .nav-tabs .nav-link.disabled {
-            color: #6c757d;
-            background-color: transparent;
-            border-color: transparent
-        }
-
-        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-            color: #495057;
-            background-color: #fff;
-            border-color: #dee2e6 #dee2e6 #fff
-        }
-
-    .nav-tabs .dropdown-menu {
-        margin-top: -1px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0
-    }
-
-.nav-pills .nav-link {
-    border-radius: .25rem
-}
-
-    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-        color: #fff;
-        background-color: #007bff
-    }
-
-.nav-fill .nav-item {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    text-align: center
-}
-
-.nav-justified .nav-item {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    text-align: center
-}
-
-.tab-content > .tab-pane {
-    display: none
-}
-
-.tab-content > .active {
-    display: block
-}
 
 .navbar {
     position: relative;
@@ -3891,7 +3768,7 @@ tbody.collapse.show {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: .5rem 1rem;
-    background-color: #FEF4EB;
+    background-color: creme;
 }
 
     .navbar > .container, .navbar > .container-fluid {
@@ -3917,12 +3794,11 @@ tbody.collapse.show {
     line-height: inherit;
     white-space: nowrap;
     color: black;
-
 }
 
     .navbar-brand:focus, .navbar-brand:hover {
         text-decoration: none;
-            color: black;
+        color: black;
     }
 
 .navbar-nav {
@@ -3941,7 +3817,7 @@ tbody.collapse.show {
     .navbar-nav .nav-link {
         padding-right: 0;
         padding-left: 0;
-        color: black; 
+        color: black;
     }
 
     .navbar-nav .dropdown-menu {
@@ -6031,8 +5907,9 @@ button.close {
     vertical-align: text-top !important
 }
 
+/* dit is voor de primaire kleur (gebruikt kop header)*/
 .bg-primary {
-    background-color: #007bff !important
+    background-color: orange !important
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
@@ -6040,7 +5917,7 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 }
 
 .bg-secondary {
-    background-color: #6c757d !important
+    background-color: creme !important
 }
 
 a.bg-secondary:focus, a.bg-secondary:hover, button.bg-secondary:focus, button.bg-secondary:hover {
