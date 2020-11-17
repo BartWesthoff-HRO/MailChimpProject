@@ -9,15 +9,15 @@ using System.ComponentModel;
 namespace MailChimp.Models
 {
     [Table("logintable", Schema = "public")]
-    public class Employee
+    public class Employee : Persoon
     {
         [Key]
-        public int userid { get; set; }
+        public int medewerkerid { get; set; }
         [DisplayName("User Name")]
         [Required(ErrorMessage ="Je moet een naam invullen")]
-        public string username { get; set; }
+        public string gebruikersnaam { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Je moet een wachtwoord invullen")]
-        public string password { get; set; }
+        public string wachtwoord { get; set; }
     }
 }
