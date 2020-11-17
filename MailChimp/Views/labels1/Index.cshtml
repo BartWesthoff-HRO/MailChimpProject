@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MailChimp.Models.ContactPerson>
+﻿
+
+@model IEnumerable<MailChimp.Models.labels>
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +16,7 @@
     <div class="navbar-nav">
         <a class="nav-item nav-link active" @Html.ActionLink("Home", "Index", "Home", null, null)</a
         <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
-        <a class="nav-item nav-link active" @Html.ActionLink("Restultaten", "Index", "Resultaten", null, null)</a>
+        <a class="nav-item nav-link active" href="~/Views/resultaten/Index.cshtml" hallo tekst</a>
         <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPersons", null, null)</a>
     </div>
 </nav>
@@ -23,10 +25,7 @@
     <tr>
         <th> </th>
         <th>
-            @Html.DisplayNameFor(model => model.firstname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.lastname)
+            @Html.DisplayNameFor(model => model.lname)
         </th>
         <th></th>
         <th>
@@ -37,23 +36,15 @@
     {
         <tr>
             <td>
-                <a href="~/Contactpersons/Edit/@item.personid.ToString()" class="btn"> inzien</a>
+                <a href="~/labels1/Edit/@item.labelid.ToString()" class="btn"> inzien</a>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.firstname)
+                @Html.DisplayFor(modelItem => item.lname)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.lastname)
+                <a href="~/labels1/Delete/@item.labelid.ToString()" class="btn"> verwijderen</a>
             </td>
-            <td>
-                <a href="~/Contactpersons/Delete/@item.personid.ToString()" class="btn"> verwijderen</a>
-            </td>
-            @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.personid }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.personid }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.personid })
-                </td>*@
-        </tr>
+           </tr>
     }
 
 
@@ -61,12 +52,13 @@
 
 </table>
 <p>
-    <a href="ContactPersons/create" class="btn"> Contactpersoon toevoegen</a>
-    <a href="Labels1/index" class="btn"> Labels</a>
+    <a href="labels1/create" class="btn"> label toevoegen</a>
 </p>
-
 
 <img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />
 
 
 
+
+
+>

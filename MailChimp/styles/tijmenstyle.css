@@ -2507,6 +2507,7 @@ select.form-control:focus::-ms-value {
             background-image: none
         }
 
+
 /*a.btn.disabled, fieldset:disabled a.btn {
     pointer-events: none
 }
@@ -3415,7 +3416,7 @@ tbody.collapse.show {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         width: 1%;
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
         .input-group > .custom-file:focus, .input-group > .custom-select:focus, .input-group > .form-control:focus {
@@ -9065,3 +9066,4 @@ button {
 .hide {
     display: none;
 }
+

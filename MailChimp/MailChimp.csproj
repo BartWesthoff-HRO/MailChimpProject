@@ -360,6 +360,8 @@
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\labels1Controller.cs" />
+    <Compile Include="Controllers\labelsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ResultatenController.cs" />
     <Compile Include="DataContext\ApplicationDBContext.cs" />
@@ -368,6 +370,7 @@
     </Compile>
     <Compile Include="Models\ContactPerson.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\labels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -418,10 +421,13 @@
     <Content Include="Views\Email\Index.cshtml" />
     <Content Include="Views\ContactPersons\Create.cshtml" />
     <Content Include="Views\ContactPersons\Delete.cshtml" />
-    <Content Include="Views\ContactPersons\Details.cshtml" />
     <Content Include="Views\ContactPersons\Edit.cshtml" />
     <Content Include="Views\ContactPersons\Index.cshtml" />
     <Content Include="Views\resultaten\Index.cshtml" />
+    <Content Include="Views\labels1\Create.cshtml" />
+    <Content Include="Views\labels1\Delete.cshtml" />
+    <Content Include="Views\labels1\Edit.cshtml" />
+    <Content Include="Views\labels1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
