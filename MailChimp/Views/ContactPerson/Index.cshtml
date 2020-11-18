@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MailChimp.Models.ContactPerson>
+﻿@model IEnumerable<MailChimp.Models.ContactPersoon>
 
 
 <head>
@@ -50,10 +50,10 @@
                 @foreach (var obj in Model)
                 {
                     <tr>
-                        <td>@obj.FirstName </td>
-                        <td> @obj.LastName</td>
-                        <td> @obj.Label</td>
-                        <td> @obj.Company</td>
+                        <td>@obj.voornaam </td>
+                        <td> @obj.achternaam</td>
+                        <td> @obj.GetLabels(null, null)</td>
+                        <td> @obj.bedrijfsnaam</td>
                         <td> @obj.email</td>
                     </tr>
                 }

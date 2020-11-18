@@ -13,12 +13,12 @@ namespace MailChimp.Controllers
         public ActionResult Index()
         {
 
-            List<ContactPerson> personenLijst = new List<ContactPerson>();
+            List<ContactPersoon> personenLijst = new List<ContactPersoon>();
 
-            personenLijst.Add(new ContactPerson() { FirstName="Bart", LastName = "Westhoff", Company = "groepje 6", Label = "werknemer", email = "bartW@email.com" });
-            personenLijst.Add(new ContactPerson() { FirstName = "Tijmen", LastName = "Rietveld", Company = "groepje 6", Label = "werknemer", email = "TijmenR@email.com" });
-            personenLijst.Add(new ContactPerson() { FirstName = "Nathan", LastName = "Samjio", Company = "groepje 6", Label = "werknemer", email = "NathanS@email.com" });
-            personenLijst.Add(new ContactPerson() { FirstName = "Isabelle", LastName = "Stienen", Company = "groepje 6", Label = "Scrummaster", email = "IsabelleS@email.com" });
+            personenLijst.Add(new ContactPersoon() { voornaam = "Bart", achternaam = "Westhoff", email = "bartwesthoff@mail.com", bedrijfsnaam = "Bart.BV", tussenvoegsel = ""});
+            personenLijst.Add(new ContactPersoon() { voornaam = "Tijmen", achternaam = "Rietveld", email = "rietveld@mail.com", bedrijfsnaam = "Bart.BV", tussenvoegsel = "" });
+            personenLijst.Add(new ContactPersoon() { voornaam = "Nathan", achternaam = "Samjio", email = "samjio@mail.com", bedrijfsnaam = "Bart.BV", tussenvoegsel = "" });
+            personenLijst.Add(new ContactPersoon() { voornaam = "Isabelle", achternaam = "Stienen", email = "stienen@mail.com", bedrijfsnaam = "Bart.BV", tussenvoegsel = "" });
             return View(personenLijst);
         }
     }

@@ -15,8 +15,13 @@ namespace MailChimp.Models
         {
             /*lijst maken voor de labelnamen*/
             List<string> labels = new List<string>();
+
+            if (labels.Count == 0 || kenmrkn == null || lbls == null)
+            {
+                return null;
+            }
             /*door alle kenmerken heen gaan*/
-            for(int i = 0; i < kenmrkn.Length; i++)
+            for (int i = 0; i < kenmrkn.Length; i++)
             {
                 /*toevoegen aan de labelnamen*/
                 if(kenmrkn[i].labelid == lbls[i].labelid)
@@ -25,10 +30,7 @@ namespace MailChimp.Models
                 }
             }
             /*indien een persoon geen label heeft dan is er niets*/
-            if(labels.Count == 0)
-            {
-                return null;
-            }
+            
             /*terug geven van alle labels die bij een persoon horen*/
             return labels;
         }

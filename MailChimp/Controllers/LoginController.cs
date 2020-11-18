@@ -20,7 +20,7 @@ namespace MailChimp.Controllers
         {
             using (ApplicationDBContext db = new ApplicationDBContext())
             {
-                Employee userDetails = db.Empobj.Where(x => x.username == employee.username && x.password == employee.password).FirstOrDefault();
+                Employee userDetails = db.Empobj.Where(x => x.gebruikersnaam == employee.gebruikersnaam && x.wachtwoord == employee.wachtwoord).FirstOrDefault();
                 if (userDetails == null)
                 {
                     
@@ -28,8 +28,8 @@ namespace MailChimp.Controllers
                 }
                 else
                 {
-                    Session["userid"] = userDetails.userid;
-                    Session["username"] = userDetails.username;
+                    Session["userid"] = userDetails.medewerkerid;
+                    Session["username"] = userDetails.gebruikersnaam;
                     return RedirectToAction("Index", "Home");
                 }
             }

@@ -58,7 +58,7 @@ namespace MailChimp.Controllers
             {
                 foreach (var model in db.Empobj)
                 {
-                    if(model.password == employee.password || model.username == employee.username)
+                    if(model.wachtwoord == employee.wachtwoord || model.gebruikersnaam == employee.gebruikersnaam)
                     {
                         return View(employee);
                     }

@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace MailChimp.Models
 {
-    [Table("logintable", Schema = "public")]
+    [Table("medewerker", Schema = "public")]
     public class Employee : Persoon
     {
         [Key]
