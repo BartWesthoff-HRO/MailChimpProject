@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using MailChimp.DataContext;
 using MailChimp.Models;
+using System.Dynamic;
+using MailChimp.ViewModels;
 
 namespace MailChimp.Controllers
 {
@@ -18,6 +20,7 @@ namespace MailChimp.Controllers
         // GET: ContactPersons
         public ActionResult Index()
         {
+            
             return View(db.ContactPersons.ToList());
         }
 
@@ -39,6 +42,7 @@ namespace MailChimp.Controllers
         // GET: ContactPersons/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
@@ -71,6 +75,8 @@ namespace MailChimp.Controllers
             {
                 return HttpNotFound();
             }
+
+    
             return View(contactPerson);
         }
 
@@ -125,4 +131,5 @@ namespace MailChimp.Controllers
             base.Dispose(disposing);
         }
     }
+
 }
