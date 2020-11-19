@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using MailChimp.DataContext;
 using MailChimp.Models;
 using System.Dynamic;
-using MailChimp.ViewModels;
 
 namespace MailChimp.Controllers
 {
