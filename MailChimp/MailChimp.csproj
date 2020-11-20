@@ -410,7 +410,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\ContactPerson\Index.cshtml" />
     <Content Include="Views\Emp\Create.cshtml" />
     <Content Include="Views\Emp\Delete.cshtml" />
     <Content Include="Views\Emp\Details.cshtml" />
@@ -427,7 +426,6 @@
     <Content Include="Views\labels1\Delete.cshtml" />
     <Content Include="Views\labels1\Edit.cshtml" />
     <Content Include="Views\labels1\Index.cshtml" />
-    <Content Include="Views\ContactPersons\BigModelDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

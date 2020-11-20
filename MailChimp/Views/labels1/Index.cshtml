@@ -2,24 +2,10 @@
 
 @model IEnumerable<MailChimp.Models.labels>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homescreen</title>
-    <link href="~/styles/tijmenstyle.css" rel="stylesheet" />
-</head>
+@{ ViewBag.Title = "Labels";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 
-<nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
-    <div class="navbar-nav">
-        <a class="nav-item nav-link active" @Html.ActionLink("Home", "Index", "Home", null, null)</a
-        <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
-        <a class="nav-item nav-link active" href="~/Views/resultaten/Index.cshtml" hallo tekst</a>
-        <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPersons", null, null)</a>
-    </div>
-</nav>
 
 <table class="table">
     <tr>
@@ -44,7 +30,7 @@
             <td>
                 <a href="~/labels1/Delete/@item.labelid.ToString()" class="btn"> verwijderen</a>
             </td>
-           </tr>
+        </tr>
     }
 
 
@@ -52,7 +38,8 @@
 
 </table>
 <p>
-    <a href="labels1/create" class="btn"> label toevoegen</a>
+    <a href="~/labels1/create" class="btn"> label toevoegen</a>
+    <a href="~/ContactPersons/index" class="btn"> Labels</a>
 </p>
 
 <img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />

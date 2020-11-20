@@ -1,26 +1,8 @@
 ﻿@model MailChimp.Models.ContactPerson
 
-@{ ViewBag.Title = "Index";
+@{ ViewBag.Title = "Contactpersoon" + @Html.DisplayNameFor(model => model.firstname);
                 Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homescreen</title>
-    <link href="~/styles/tijmenstyle.css" rel="stylesheet" />
-</head>
-
-
-<nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
-    <div class="navbar-nav">
-        <a class="nav-item nav-link active" @Html.ActionLink("Home", "Index", "Home", null, null)</a
-        <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
-        <a class="nav-item nav-link active" @Html.ActionLink("resultaten", "Index", "resultaten", null, null)</a>
-        <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPersons", null, null)</a>
-    </div>
-</nav>
 
 
 @using (Html.BeginForm())
