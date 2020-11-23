@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -47,13 +46,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework6.Npgsql, Version=6.4.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework6.Npgsql.6.4.1\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="MailChimp.Net, Version=4.2.1.0, Culture=neutral, PublicKeyToken=37d26d538413c581, processorArchitecture=MSIL">
       <HintPath>..\packages\MailChimp.Net.V3.4.2.1\lib\net45\MailChimp.Net.dll</HintPath>
@@ -357,11 +356,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactPersonsController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KlantToevoegenController.cs" />
+    <Compile Include="Controllers\klantsController.cs" />
     <Compile Include="Controllers\labels1Controller.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ResultatenController.cs" />
@@ -371,6 +369,7 @@
     </Compile>
     <Compile Include="Models\ContactPerson.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\klant.cs" />
     <Compile Include="Models\labels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -415,8 +414,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\ContactPerson\Index.cshtml" />
     <Content Include="Views\Emp\Create.cshtml" />
     <Content Include="Views\Emp\Delete.cshtml" />
     <Content Include="Views\Emp\Details.cshtml" />
@@ -424,8 +421,6 @@
     <Content Include="Views\Emp\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Email\Index.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Views\KlantToevoegen\Index.cshtml" />
     <Content Include="Views\ContactPersons\Create.cshtml" />
     <Content Include="Views\ContactPersons\Delete.cshtml" />
     <Content Include="Views\ContactPersons\Edit.cshtml" />
@@ -436,6 +431,10 @@
     <Content Include="Views\labels1\Edit.cshtml" />
     <Content Include="Views\labels1\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\klants\Create.cshtml" />
+    <Content Include="Views\klants\Delete.cshtml" />
+    <Content Include="Views\klants\Edit.cshtml" />
+    <Content Include="Views\klants\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -484,10 +483,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
