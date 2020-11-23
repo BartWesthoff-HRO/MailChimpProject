@@ -356,27 +356,34 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ContactPersonsController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KlantToevoegenController.cs" />
+    <Compile Include="Controllers\labels1Controller.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResultatenController.cs" />
     <Compile Include="DataContext\ApplicationDBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactPerson.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\labels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\logo.jpg" />
+    <Content Include="Content\bgimage.jpg" />
     <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -397,7 +404,6 @@
     <Content Include="styles\HomeStyle.css" />
     <Content Include="styles\style.css" />
     <Content Include="styles\tijmenstyle.css" />
-    <Content Include="Views\Login\login page.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -420,10 +426,18 @@
     <Content Include="Views\Email\Index.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\KlantToevoegen\Index.cshtml" />
+    <Content Include="Views\ContactPersons\Create.cshtml" />
+    <Content Include="Views\ContactPersons\Delete.cshtml" />
+    <Content Include="Views\ContactPersons\Edit.cshtml" />
+    <Content Include="Views\ContactPersons\Index.cshtml" />
+    <Content Include="Views\resultaten\Index.cshtml" />
+    <Content Include="Views\labels1\Create.cshtml" />
+    <Content Include="Views\labels1\Delete.cshtml" />
+    <Content Include="Views\labels1\Edit.cshtml" />
+    <Content Include="Views\labels1\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
