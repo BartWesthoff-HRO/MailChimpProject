@@ -18,6 +18,6 @@ namespace MailChimp.DataContext
 
         public System.Data.Entity.DbSet<MailChimp.Models.ContactPerson> ContactPersons { get; set; }
 
-        public System.Data.Entity.DbSet<MailChimp.Models.labels> labels { get; set; }
+        public System.Data.Entity.DbSet<MailChimp.Models.labels1> labels { get; set; }
     }
 }
