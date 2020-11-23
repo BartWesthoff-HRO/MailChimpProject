@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Klantenbestand</h2>
+
+<style>
+
+    .button {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 1200px;
+        top: 350px;
+    }
+
+        .button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .button:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
+
+    
+    .button1 {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 1200px;
+        top: 300px;
+    }
+    .button1:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .button1:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+
+    .button2 {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 1200px;
+        top: 250px;
+    }
+
+        .button2:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .button2:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
+    .button3 {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 1200px;
+        top: 200px;
+    }
+
+        .button3:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .button3:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
+
+    .klant_toevoegen {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 1200px;
+        top: 100px;
+    }
+
+    .klant_toevoegen:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .klant_toevoegen:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+    .Terug_btn {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        position: absolute;
+        left: 150px;
+        top: 550px;
+    }
+
+    .Terug_btn:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .Terug_btn:active {
+        background-color: orange;
+        box-shadow: 0 5px orange;
+        transform: translateY(4px);
+    }
+    
+    
+
+</style>
+
+<body>
+
+    <a class="button"> Inzien</a>
+    <a class="button1"> Inzien</a>
+    <a class="button2"> Inzien</a>
+    <a class="button3"> Inzien</a>
+    <a class="klant_toevoegen"> Klant toevoegen</a>
+    <a class="Terug_btn"> Terug</a>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                Course Title
+            </th>
+            <th>
+                Grade
+            </th>
+            <th>
+                Credits
+            </th>
+        </tr>
+
+        @*
+            @foreach (var item in Model.Enrollments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Credits)
+                </td>
+            </tr>
+        }
+        *@
+    </table>
+
+</body>
+
