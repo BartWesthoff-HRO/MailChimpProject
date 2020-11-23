@@ -1,7 +1,6 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-}
+@{ ViewBag.Title = "Contact personen";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <h2>Klantenbestand</h2>
 
@@ -35,7 +34,7 @@
             transform: translateY(4px);
         }
 
-    
+
     .button1 {
         background-color: orange;
         border: none;
@@ -52,16 +51,17 @@
         left: 1200px;
         top: 300px;
     }
-    .button1:hover {
-        background-color: orange;
-        color: white;
-    }
 
-    .button1:active {
-        background-color: orange;
-        box-shadow: 0 5px orange;
-        transform: translateY(4px);
-    }
+        .button1:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .button1:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
 
     .button2 {
         background-color: orange;
@@ -90,6 +90,7 @@
             box-shadow: 0 5px orange;
             transform: translateY(4px);
         }
+
     .button3 {
         background-color: orange;
         border: none;
@@ -135,16 +136,17 @@
         top: 100px;
     }
 
-    .klant_toevoegen:hover {
-        background-color: orange;
-        color: white;
-    }
+        .klant_toevoegen:hover {
+            background-color: orange;
+            color: white;
+        }
 
-    .klant_toevoegen:active {
-        background-color: orange;
-        box-shadow: 0 5px orange;
-        transform: translateY(4px);
-    }
+        .klant_toevoegen:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
+
     .Terug_btn {
         background-color: orange;
         border: none;
@@ -162,19 +164,16 @@
         top: 550px;
     }
 
-    .Terug_btn:hover {
-        background-color: orange;
-        color: white;
-    }
+        .Terug_btn:hover {
+            background-color: orange;
+            color: white;
+        }
 
-    .Terug_btn:active {
-        background-color: orange;
-        box-shadow: 0 5px orange;
-        transform: translateY(4px);
-    }
-    
-    
-
+        .Terug_btn:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
 </style>
 
 <body>
@@ -201,20 +200,20 @@
         </tr>
 
         @*
-            @foreach (var item in Model.Enrollments)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Course.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Grade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Course.Credits)
-                </td>
-            </tr>
-        }
+                @foreach (var item in Model.Enrollments)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course.Credits)
+                    </td>
+                </tr>
+            }
         *@
     </table>
 
