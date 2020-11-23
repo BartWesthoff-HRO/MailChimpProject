@@ -9,10 +9,19 @@
     <tr>
         <th> </th>
         <th>
-            @Html.DisplayNameFor(model => model.firstname)
+            voornaam
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.lastname)
+            tussenvoegsel
+        </th>
+        <th>
+            achternaam
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            bedrijfsnaam
         </th>
         <th></th>
         <th>
@@ -21,25 +30,38 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                <a href="~/Contactpersons/Edit/@item.personid.ToString()" class="btn"> inzien</a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.firstname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lastname)
-            </td>
-            <td>
-                <a href="~/Contactpersons/Delete/@item.personid.ToString()" class="btn"> verwijderen</a>
-            </td>
-            @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.personid }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.personid }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.personid })
-                </td>*@
-        </tr>
+<tr>
+    <td>
+        <a href="~/Contactpersons/Edit/@item.personid.ToString()" class="btn"> inzien</a>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.firstname)
+    </td>
+    <td>
+        -
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.lastname)
+    </td>
+    <td>
+        -
+    </td>
+
+    <td>
+        -
+    </td>
+    <td>
+        <a href="~/Contactpersons/Delete/@item.personid.ToString()" class="btn"> verwijderen</a>
+    </td>
+    <td></td>
+
+
+    @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.personid }) |
+            @Html.ActionLink("Details", "Details", new { id = item.personid }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.personid })
+        </td>*@
+</tr>
     }
 
 
@@ -53,28 +75,3 @@
 </p>
 
 <img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />
-
-
-
-<script>
-
-    toggle between hiding and showing the dropdown content * /
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-
-
-</script>
