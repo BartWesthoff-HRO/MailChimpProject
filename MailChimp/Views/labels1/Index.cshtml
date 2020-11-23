@@ -1,0 +1,51 @@
+﻿
+
+@model IEnumerable<MailChimp.Models.labels>
+
+@{ ViewBag.Title = "Labels";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+<table class="table">
+    <tr>
+        <th> </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lname)
+        </th>
+        <th></th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="~/labels1/Edit/@item.labelid.ToString()" class="btn"> inzien</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lname)
+            </td>
+            <td>
+                <a href="~/labels1/Delete/@item.labelid.ToString()" class="btn"> verwijderen</a>
+            </td>
+        </tr>
+    }
+
+
+
+
+</table>
+<p>
+    <a href="~/labels1/create" class="btn"> label toevoegen</a>
+    <a href="~/ContactPersons/index" class="btn"> Labels</a>
+</p>
+
+<img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />
+
+
+
+
+
+>

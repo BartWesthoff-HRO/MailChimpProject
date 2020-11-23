@@ -1,9 +1,7 @@
 ﻿@model MailChimp.Models.Employee
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Login";
 }
-
-
         <!DOCTYPE html>
     <html lang="en" dir="ltr">
       <head>
@@ -44,12 +42,8 @@
                           <td></td>
                           <td>@Html.ValidationMessageFor(model => model.password)</td>
                       </tr>
-                      
-
                       <tr>
-
                           <td></td>
-
                           <div class="field">
                               <input type="submit" value="Login">
                           </div>

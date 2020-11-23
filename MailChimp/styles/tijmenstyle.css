@@ -2475,16 +2475,24 @@ select.form-control:focus::-ms-value {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: black;
+    background-color: orange;
 }
 
     .btn:focus, .btn:hover {
-        text-decoration: none
+        text-decoration: none;
+        box-shadow: black;
+        color: black;
+        background-color: orange;
+
     }
 
     .btn.focus, .btn:focus {
-        outline: 0;
-        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25)
+        text-decoration: none;
+        box-shadow: black;
+        color: black;
+        background-color: orange;
     }
 
     .btn.disabled, .btn:disabled {
@@ -2499,40 +2507,39 @@ select.form-control:focus::-ms-value {
             background-image: none
         }
 
-a.btn.disabled, fieldset:disabled a.btn {
+
+/*a.btn.disabled, fieldset:disabled a.btn {
     pointer-events: none
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    color: black;
+    background-color: orange;
+    border-color: orange
 }
 
     .btn-primary:hover {
-        color: #fff;
-        background-color: #0069d9;
-        border-color: #0062cc
+        color: black;
     }
 
     .btn-primary.focus, .btn-primary:focus {
-        box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+        box-shadow: orange;
+        border-color: orange;
+        color: black;
     }
 
     .btn-primary.disabled, .btn-primary:disabled {
-        color: #fff;
+        color: black;
         background-color: #007bff;
-        border-color: #007bff
+        border-color: orange
     }
 
     .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-        color: #fff;
-        background-color: #0062cc;
-        border-color: #005cbf
+        color: orange;
     }
 
         .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-            box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+            box-shadow: orange;
         }
 
 .btn-secondary {
@@ -2757,9 +2764,9 @@ a.btn.disabled, fieldset:disabled a.btn {
 
         .btn-dark:not(:disabled):not(.disabled).active:focus, .btn-dark:not(:disabled):not(.disabled):active:focus, .show > .btn-dark.dropdown-toggle:focus {
             box-shadow: 0 0 0 .2rem rgba(52,58,64,.5)
-        }
+        }*/
 
-.btn-outline-primary {
+/*.btn-outline-primary {
     color: #007bff;
     background-color: transparent;
     background-image: none;
@@ -2821,9 +2828,9 @@ a.btn.disabled, fieldset:disabled a.btn {
 
         .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
             box-shadow: 0 0 0 .2rem rgba(108,117,125,.5)
-        }
+        }*/
 
-.btn-outline-success {
+/*.btn-outline-success {
     color: #28a745;
     background-color: transparent;
     background-image: none;
@@ -3037,7 +3044,7 @@ a.btn.disabled, fieldset:disabled a.btn {
     .btn-link.disabled, .btn-link:disabled {
         color: #6c757d
     }
-
+*/
 .btn-group-lg > .btn, .btn-lg {
     padding: .5rem 1rem;
     font-size: 1.25rem;
@@ -3409,7 +3416,7 @@ tbody.collapse.show {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         width: 1%;
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
         .input-group > .custom-file:focus, .input-group > .custom-select:focus, .input-group > .form-control:focus {
@@ -4799,6 +4806,7 @@ tbody.collapse.show {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem
+    
 }
 
 .alert-heading {
@@ -9014,6 +9022,16 @@ a.text-dark:focus, a.text-dark:hover {
     }
 
 input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    left: 500px;
+    top: 80px;
+    resize: none;
+}
+
+/*input[type=text] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -9023,7 +9041,7 @@ input[type=text] {
     left: 500px;
     top: 80px;
     resize: none;
-}
+}*/
 
 textarea {
     width: 60%;
@@ -9038,4 +9056,63 @@ textarea {
     top: 200px;
     left: 500px;
     resize: none;
+}
+
+button {
+    border: 1px #AAA solid;
+    padding: 4px 10px;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+    /* Dropdown button on hover & focus */
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
 }

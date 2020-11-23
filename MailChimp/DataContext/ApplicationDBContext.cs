@@ -15,5 +15,9 @@ namespace MailChimp.DataContext
         }
 
         public virtual DbSet<Employee> Empobj { get; set; }
+
+        public System.Data.Entity.DbSet<MailChimp.Models.ContactPerson> ContactPersons { get; set; }
+
+        public System.Data.Entity.DbSet<MailChimp.Models.labels> labels { get; set; }
     }
 }

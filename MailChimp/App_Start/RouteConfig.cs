@@ -16,7 +16,7 @@ namespace MailChimp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "labels1", action = "index", id = UrlParameter.Optional }
             );
         }
     }

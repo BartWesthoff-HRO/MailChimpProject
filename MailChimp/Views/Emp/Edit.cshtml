@@ -1,16 +1,14 @@
 ﻿@model MailChimp.Models.Employee
 
-@{
-    ViewBag.Title = "Edit";
-}
+@{ ViewBag.Title = "gegevens veranderen";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<h2>Edit</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Employee</h4>
         <hr />

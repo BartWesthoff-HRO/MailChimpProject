@@ -6,15 +6,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Web;
 using System.ComponentModel;
 
+
 namespace MailChimp.Models
 {
-    [Table("contactpersontable", Schema = "public")]
-    public class ContactPerson
+    [Table("labels", Schema = "public")]
+    public class labels
     {
         [Key]
-        public int personid { get; set; }
-        public string firstname { get; set; }
-        public string lastname { get; set; }
-
+        public int labelid { get; set; }
+        public string lname { get; set; }
     }
 }

@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Email</title>
-    <link rel="stylesheet" href="~/styles/tijmenstyle.css" />
+    <title>Homescreen</title>
+    <link href="~/styles/tijmenstyle.css" rel="stylesheet" />
 </head>
 
 
-<body>
-
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
-            <a class="nav-item nav-link active" href="mailto:test@test.com"> restultaten</a>
-            <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPerson", null, null)</a>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="https://www.renvl.nl/" target="_blank">  <img src="~/Content/logo.png" alt=""></a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" @Html.ActionLink("Home", "Index", "Home", null, null)</a
+        <a class="nav-item nav-link active" @Html.ActionLink("Email", "Index", "Email", null, null)</a>
+        <a class="nav-item nav-link active" @Html.ActionLink("resultaten", "Index", "resultaten", null, null)</a>
+        <a class="nav-item nav-link active" @Html.ActionLink("ContactPersonen", "Index", "ContactPersons", null, null)</a>
+    </div>
+</nav>
 
 
-    <a class="button"> Reeds verzonden emails</a>
-    <a class="versturen">Versturen</a>
 
-    <form>
-        <input type="text" placeholder="E-mailadres/tags/achternaam">
-        <textarea></textarea>
-    </form>
+<a class="button"> Reeds verzonden emails</a>
+<a class="versturen">Versturen</a>
+
+<form>
+    <input type="text" placeholder="E-mailadres/tags/achternaam">
+    <textarea></textarea>
+</form>
 </body>
 

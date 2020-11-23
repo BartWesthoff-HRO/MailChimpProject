@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MailChimp.Models.ContactPerson>
+
+@{ ViewBag.Title = "Contact personen";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+<table class="table">
+    <tr>
+        <th> </th>
+        <th>
+            @Html.DisplayNameFor(model => model.firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastname)
+        </th>
+        <th></th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="~/Contactpersons/Edit/@item.personid.ToString()" class="btn"> inzien</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastname)
+            </td>
+            <td>
+                <a href="~/Contactpersons/Delete/@item.personid.ToString()" class="btn"> verwijderen</a>
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.personid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.personid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.personid })
+                </td>*@
+        </tr>
+    }
+
+
+
+
+</table>
+
+<p>
+    <a href="~/contactpersons/create" class="btn"> contactpersoon toevoegen</a>
+    <a href="~/labels1/index" class="btn"> Labels</a>
+</p>
+
+<img src="~/Content/bgimage.jpg" , height="100%" , width="100%" />
+
+
+
+<script>
+
+    toggle between hiding and showing the dropdown content * /
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+
+
+</script>
