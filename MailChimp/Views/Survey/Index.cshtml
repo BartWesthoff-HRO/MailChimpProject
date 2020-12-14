@@ -1,0 +1,183 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .checkbox_group input {
+        background-color: #4CAF50; /* Green background */
+        border: 1px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        width: 150px; /* Set a width if needed */
+        display: block; /* Make the buttons appear below each other */
+        position: relative;
+        left: 550px;
+        top: 100px;
+    }
+
+    input[type='checkbox'] {
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 5px;
+        border: 2px solid #555;
+    }
+
+    input[type='checkbox']:checked {
+        background: #abd;
+    }
+
+    [type=checkbox]:after {
+        content: attr(value);
+        left: auto;
+        color:black;
+    }
+
+
+
+    .radio_group input {
+        background-color: #4CAF50; /* Green background */
+        border: 1px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        width: 150px; /* Set a width if needed */
+        display: block; /* Make the buttons appear below each other */
+        position: relative;
+        left: 550px;
+        top: 200px;
+    }
+
+    input[type= 'radio'] {
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 5px;
+        border: 2px solid #555;
+        
+    }
+
+        input[type='radio']:checked {
+            background: #abd;
+        }
+    [type=radio]:after {
+        content: attr(value);
+        float:right;
+        color: black;
+    }
+
+    button {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+        button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        button:active {
+            background-color: orange;
+            box-shadow: 0 5px orange;
+            transform: translateY(4px);
+        }
+    
+    body {
+        background-image: url(https://media-exp1.licdn.com/dms/image/C4E1BAQEyJm--zZ-B8A/company-background_10000/0?e=2159024400&v=beta&t=IqgyrPVwAiGpZH_7A_uHlTH_eOGxl2tS4fShj51aEFA);
+        
+    }
+    canvas {
+        height: 150%;
+        width: 55%;
+        position: absolute;
+        left: 400px;
+        top: 100px;
+        border: 1px solid black;
+        background-color: rgba(128,128,128, 0.5);
+    }
+
+    input[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f8f8f8;
+        resize: none;
+    }
+
+
+    .input_group input {
+        display: block;
+    }
+    
+</style>
+
+
+
+<h2 style="position: relative; left: 550px; top: 50px;"><b>Hoe ongelofelijk geweldig en mooi vind je onze applicatie?</b></h2>
+
+
+<body>
+    <div>
+        <canvas id="myCanvas"></canvas>
+
+        <label style="position: relative; left: 650px; top: 150px;"><b>Emailadres:</b></label>
+        
+         <input type="text" placeholder="Emailadres" style="position: relative; left: 650px; top: 150px;" />
+        
+
+        <div class="input_group" style="position:relative; left: 550px; top:700px;">
+            <label><b>Van een schaal van 1 tot 10 wat vind u van de applicatie?</b></label>
+            <input type="text" />
+        </div>
+
+        <button style="position: relative; left: 750px; top: 850px;"> Turn in</button>
+
+        <div class="checkbox_group">
+            @using (Html.BeginForm())
+            {
+                <label style="position: relative; left: 550px; top: 90px;"> <b>Wie vind jij de grootste strijder uit groep 6?</b></label>
+                <input type="checkbox" name="CheckedCart" value="Tijmen" />
+
+                <input type="checkbox" name="CheckedCart" value="Bart" />
+
+                <input type="checkbox" name="CheckedCart" value="Isabelle" />
+
+                <input type="checkbox" name="CheckedCart" value="Nathan" />
+
+            }
+        </div>
+
+        <div class="radio_group">
+
+            <label style="position: relative; left: 550px; top: 190px;"> <b>Wie is het langste?</b></label>
+            <input type="radio" name="radio1" value="Tijmen" />
+
+            <input type="radio" name="radio2" value="Isabelle" />
+
+            <input type="radio" name="radio3" value="Bart" />
+
+            <input type="radio" name="radio4" value="Nathan" />
+        </div>
+
+    </div>
+</body>
+
+
+
+
+
+
+
+
+

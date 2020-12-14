@@ -363,6 +363,7 @@
     <Compile Include="Controllers\labels1Controller.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ResultatenController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="DataContext\ApplicationDBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -435,6 +436,7 @@
     <Content Include="Views\klants\Delete.cshtml" />
     <Content Include="Views\klants\Edit.cshtml" />
     <Content Include="Views\klants\Index.cshtml" />
+    <Content Include="Views\Survey\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
