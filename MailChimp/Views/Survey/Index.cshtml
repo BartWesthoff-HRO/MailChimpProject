@@ -10,7 +10,7 @@
         color: white; /* White text */
         padding: 10px 24px; /* Some padding */
         cursor: pointer; /* Pointer/hand icon */
-        width: 150px; /* Set a width if needed */
+         /* Set a width if needed */
         display: block; /* Make the buttons appear below each other */
         position: relative;
         left: 550px;
@@ -29,11 +29,7 @@
         background: #abd;
     }
 
-    [type=checkbox]:after {
-        content: attr(value);
-        left: auto;
-        color:black;
-    }
+    
 
 
 
@@ -47,7 +43,7 @@
         display: block; /* Make the buttons appear below each other */
         position: relative;
         left: 550px;
-        top: 200px;
+        top: 130px;
     }
 
     input[type= 'radio'] {
@@ -87,18 +83,14 @@
             color: white;
         }
 
-        button:active {
-            background-color: orange;
-            box-shadow: 0 5px orange;
-            transform: translateY(4px);
-        }
+        
     
     body {
         background-image: url(https://media-exp1.licdn.com/dms/image/C4E1BAQEyJm--zZ-B8A/company-background_10000/0?e=2159024400&v=beta&t=IqgyrPVwAiGpZH_7A_uHlTH_eOGxl2tS4fShj51aEFA);
         
     }
     canvas {
-        height: 150%;
+        height: 200%;
         width: 55%;
         position: absolute;
         left: 400px;
@@ -116,15 +108,21 @@
     }
 
 
-    .input_group input {
+    .dropdown_group select {
         display: block;
+        height:35px;
+        width:135px;
+    }
+    
+    .feedback_group input{
+        display:block;
     }
     
 </style>
 
 
 
-<h2 style="position: relative; left: 550px; top: 50px;"><b>Hoe ongelofelijk geweldig en mooi vind je onze applicatie?</b></h2>
+<h2 style="position: relative; left: 650px; top: 50px;"><b>Wat vind u van de nieuwe website?</b></h2>
 
 
 <body>
@@ -133,41 +131,66 @@
 
         <label style="position: relative; left: 650px; top: 150px;"><b>Emailadres:</b></label>
         
-         <input type="text" placeholder="Emailadres" style="position: relative; left: 650px; top: 150px;" />
+         <input type="text" placeholder="Voorbeeld@email.com" style="position: relative; left: 650px; top: 150px;" />
         
 
-        <div class="input_group" style="position:relative; left: 550px; top:700px;">
-            <label><b>Van een schaal van 1 tot 10 wat vind u van de applicatie?</b></label>
-            <input type="text" />
+        <div class="dropdown_group" style="position:relative; left: 550px; top:750px;">
+            <label><b>Van een schaal van 1 tot 10 wat vind u van de website?</b></label>
+            <select class="form-control" id="Select1To10" name="Select1TO10">
+                <option>Select from 1 to 10</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
         </div>
 
-        <button style="position: relative; left: 750px; top: 850px;"> Turn in</button>
+        <button style="position: relative; left: 750px; top: 1150px;"> Turn in</button>
+
 
         <div class="checkbox_group">
-            @using (Html.BeginForm())
-            {
-                <label style="position: relative; left: 550px; top: 90px;"> <b>Wie vind jij de grootste strijder uit groep 6?</b></label>
-                <input type="checkbox" name="CheckedCart" value="Tijmen" />
+                <label style="position: relative; left: 550px; top: 90px;"> <b>Welk scherm vind u de beste design hebben?</b></label>
+                <input type="checkbox" id="checkbox1" name="CheckedCart" />
+                <label for="checkbox1" style="position: relative; left: 590px; top: 75px;">Email scherm</label>
 
-                <input type="checkbox" name="CheckedCart" value="Bart" />
+                <input type="checkbox" id="checkbox2" name="CheckedCart"  />
+                <label for="checkbox2" style="position: relative; left: 590px; top: 75px;">Login scherm</label>
 
-                <input type="checkbox" name="CheckedCart" value="Isabelle" />
+                <input type="checkbox" id="checkbox3" name="CheckedCart" value="Isabelle" />
+                <label for="checkbox3" style="position: relative; left: 590px; top: 75px;">Klanten/Contacten scherm</label>
 
-                <input type="checkbox" name="CheckedCart" value="Nathan" />
-
-            }
+                <input type="checkbox" id="checkbox4" name="CheckedCart" value="Nathan" />
+                <label for="checkbox4" style="position: relative; left: 590px; top: 75px;">Campaign</label>
         </div>
+
 
         <div class="radio_group">
 
-            <label style="position: relative; left: 550px; top: 190px;"> <b>Wie is het langste?</b></label>
-            <input type="radio" name="radio1" value="Tijmen" />
+            <label style="position: relative; left: 550px; top: 120px;"> <b>Wat vind u de beste feature van de website?</b></label>
 
-            <input type="radio" name="radio2" value="Isabelle" />
+            <input type="radio" id="Radio1" name="radio1"/>
+            <label for="Radio1" style="position: relative; left: 590px; top: 105px;">Emailen</label>
 
-            <input type="radio" name="radio3" value="Bart" />
+            <input type="radio" id="Radio2" name="radio2"/>
+            <label for="Radio2" style="position: relative; left: 590px; top: 105px;">Campaigns aanmaken</label>
 
-            <input type="radio" name="radio4" value="Nathan" />
+            <input type="radio" id="Radio3" name="radio3"/>
+            <label for="Radio3" style="position: relative; left: 590px; top: 105px;">Contacten/klanten inzien</label>
+
+            <input type="radio" id="Radio4" name="radio4"/>
+            <label for="Radio4" style="position: relative; left: 590px; top: 105px;">Inloggen</label>
+        </div>
+
+        <div class="feedback_group" style="position: relative; left: 550px; top: 300px;">
+            <label><b> Feedback:</b></label>
+            <input type="text" style="height:200px; width:400px;"/>
+           
         </div>
 
     </div>
